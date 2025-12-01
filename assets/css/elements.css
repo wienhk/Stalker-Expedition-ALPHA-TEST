@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #110508;
+}
+.container-imagem {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.container-imagem .logo img{
+    width: 40%;                   
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;            
+}
+.container-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.container-imagem::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1.2));
+    z-index: 2;
+}
+.container-imagem h1,
+.container-imagem h2 {
+    position: relative;
+    z-index: 4;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+h3{
+     color: rgb(255, 255, 255);
+}
+.title{
+    height: 200px;
+    background-color:  #000000;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+.subtitle{
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    margin: 50px;
+    padding: 0;
+    height: auto;
+}
+hr{
+    margin: 100px;
+    color: rgb(255, 255, 255);
+}
+.espaco{
+    max-width: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    height: 30px; 
+    margin-bottom: 50px;
+}
+.dayone{
+    display: flex;
+    align-items: center;   /* alinha verticalmente */
+    gap: 10px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1.2));
+    max-width: 20%;
+}
+
+.dayone img{
+    max-width: 120px;
+
+    height: auto;
+    display: block;
+    
+}
+.dayone img:last-child {
+    height: 60px;    /* segunda imagem */
+}
+.dayoneSUB{
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin-top: 20px;
+    max-width: 40%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1.2));
+    margin-bottom: 50px;
+}
+
+/*  Conteúdo  */
+
+
+.Conteudo {
+    background: rgba(0, 0, 0, 40%); 
+    position: relative;
+    width: 80%;              
+    max-width: 900px;       
+    margin: 0 auto;          
+    padding: 40px;          
+    border-radius: 5px;    
+    z-index: 1;
+}
+.Words, .Imagem {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;      
+    flex-direction: column;  
+}
+.Words{
+    color: rgb(255, 255, 255);
+    line-height: 1.6;
+    text-align: left;
+    font-size: 120%;
+    
+}
+.Words, .Imagem {
+    margin-bottom: 20px;
+}
+
+.Imagem img {
+    
+    max-width: 50%;
+    border-radius: 8px;
+}
