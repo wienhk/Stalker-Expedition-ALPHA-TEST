@@ -57,6 +57,7 @@ h1{
     text-align: center;
     margin: 0;
     padding: 0;
+    font-weight: bold;
 }
 h2{
     color: rgb(255, 255, 255);
@@ -69,26 +70,26 @@ h3{
     height: 200px;
     background-color:  #000000;
     background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    
 }
-.subtitle{
+.subtitle-container{
+   
     font-size: 17px;
     font-weight: bold;
     font-style: italic;
-    margin-top: 20px;
+    
     color: rgb(255, 255, 255);
     margin: 50px;
     padding: 0;
     height: auto;
 }
-hr{
-    margin: 100px;
-    color: rgb(255, 255, 255);
-}
+
 .espaco{
+    margin-top: 170px;
     max-width: 100%;
     background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
     height: 30px; 
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 .dayone{
     display: flex;
@@ -100,28 +101,40 @@ hr{
 
 .dayone img{
     max-width: 120px;
-
+    object-fit: cover;
+    height: auto;
+    max-width: 50%;
     height: auto;
     display: block;
     
 }
-.dayone img:last-child {
+.dayone img:last-child{
+    object-fit: cover;
+    height: auto;
+    max-width: 50%;
     height: 60px;    /* segunda imagem */
 }
 .dayoneSUB{
-    height: auto;
-    display: block;
     object-fit: cover;
-    margin-top: 20px;
-    max-width: 40%;
+    height: auto;
+    max-width: 50%;
+    height: 60px;
     background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1.2));
     margin-bottom: 50px;
 }
+.dayoneSUB img{
+    
+    height: auto;
+    max-width: 100%;
+    height: 50px;
 
+}
 /*  Conteúdo  */
 
 
-.Conteudo {
+.container-lg {
+    object-fit: cover;
+    height: auto;
     background: rgba(0, 0, 0, 40%); 
     position: relative;
     width: 80%;              
@@ -130,8 +143,9 @@ hr{
     padding: 40px;          
     border-radius: 5px;    
     z-index: 1;
+   
 }
-.Words, .Imagem {
+.Words, .container {
     position: relative;
     z-index: 2;
     display: flex;
@@ -141,18 +155,46 @@ hr{
     flex-direction: column;  
 }
 .Words{
+    columns: 150px auto;
     color: rgb(255, 255, 255);
     line-height: 1.6;
     text-align: left;
     font-size: 120%;
     
 }
-.Words, .Imagem {
+.Words, .container {
     margin-bottom: 20px;
 }
 
-.Imagem img {
-    
+.container img {
+    object-fit: cover;
+    height: auto;
     max-width: 50%;
     border-radius: 8px;
 }
+
+/* Responsividade */
+
+@media screen and (max-width: 768px){
+    .container-imagem .logo img{
+    width: 30%;
+    }
+
+}
+@media (max-width: 767px) {
+  .subtitle-container {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  .subtitle-container{
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 960px) {
+  .subtitle-container{
+    font-size: 18px;
+  }
+}   
